@@ -1,0 +1,23 @@
+{
+  "name": "strapi-vite-shadcn",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo for Strapi CMS with Vite React frontend using shadcn/ui",
+
+  "scripts": {
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npx strapi develop",
+    "setup": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently --names 'BACKEND,FRONTEND' --prefix-colors 'cyan,magenta' 'npm run backend' 'npm run frontend'",
+    "build": "cd frontend && npm run build && cd ../backend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
