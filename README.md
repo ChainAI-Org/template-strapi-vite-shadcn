@@ -5,12 +5,12 @@ A full-stack monorepo template featuring Strapi as a headless CMS with a Vite Re
 ## Structure
 
 - `/frontend` - Vite + React + TypeScript + Shadcn UI
-- `/backend` - Strapi CMS with SQLite database
+- `/backend` - Strapi CMS with PostgreSQL database
 
 ## Features
 
 - Fully TypeScript for both frontend and backend
-- SQLite database for WebContainer compatibility
+- PostgreSQL database for robust data management
 - Shadcn/UI components for beautiful, accessible UI
 - Strapi CMS for content management
 - Monorepo setup with coordinated development scripts
@@ -34,7 +34,7 @@ A full-stack monorepo template featuring Strapi as a headless CMS with a Vite Re
 ## Development
 
 - Frontend uses Vite for fast HMR and development
-- Strapi uses SQLite for easy development without external dependencies
+- Strapi uses PostgreSQL for robust data management and scalability
 - Type generation automatically creates TypeScript types from Strapi models
 
 ## Deployment
