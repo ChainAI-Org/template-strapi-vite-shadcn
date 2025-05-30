@@ -1,4 +1,5 @@
 import path from 'path';
+import WebSocket from 'ws';
 
 export default ({ env }) => {
   const client = env('DATABASE_CLIENT', 'postgres');
@@ -39,6 +40,7 @@ export default ({ env }) => {
           rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', false),
         },
         schema: env('DATABASE_SCHEMA', 'public'),
+        webSocketConstructor: WebSocket, // Explicitly provide WebSocket constructor for Neon
       },
       pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
     },
