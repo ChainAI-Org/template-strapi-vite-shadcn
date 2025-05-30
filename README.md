@@ -22,26 +22,7 @@ A full-stack monorepo template featuring Strapi as a headless CMS with a Vite Re
    npm run setup
    ```
 
-2. Create a managed database using the MCP tool with these parameters:
-   ```json
-   {
-     "db_type": "postgres",
-     "appPath": "{databasename}-{uniqueid}"
-   }
-   ```
-
-3. Add the created database credentials to the `.env` file before proceeding with Strapi installation:
-   ```
-   DATABASE_CLIENT=postgres
-   DATABASE_HOST=your_db_host
-   DATABASE_PORT=5432
-   DATABASE_NAME=your_db_name
-   DATABASE_USERNAME=your_db_username
-   DATABASE_PASSWORD=your_db_password
-   DATABASE_SSL=true
-   ```
-
-4. Start development servers:
+2. Start development servers:
    ```bash
    npm run dev
    ```
