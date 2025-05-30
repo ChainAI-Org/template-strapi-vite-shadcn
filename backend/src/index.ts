@@ -1,3 +1,13 @@
+import WebSocket from 'ws';
+
+// Polyfill global WebSocket if missing (e.g., in some WebContainer Node.js environments)
+if (typeof globalThis.WebSocket === 'undefined') {
+  (globalThis as any).WebSocket = WebSocket;
+  console.log('Polyfilled globalThis.WebSocket with ws package implementation.');
+} else {
+   console.log('globalThis.WebSocket is already defined. Using existing implementation.');
+}
+
 import type { Core } from '@strapi/strapi';
 
 /**
